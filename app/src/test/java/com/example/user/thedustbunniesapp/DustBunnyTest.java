@@ -21,7 +21,14 @@ public class DustBunnyTest {
     }
 
     @Test
-    public void testGetClean (){
-        assertEquals(100.0, dustbunny.getClean(),0.1);
+    public void testGetDirty (){
+        assertEquals(100.0, dustbunny.getDirty(),0.1);
     }
+
+    @Test
+    public void testSetName(){
+        assertEquals("Adam", dustbunny.setName("Adam"));
+    }
+
+    @Test
 }

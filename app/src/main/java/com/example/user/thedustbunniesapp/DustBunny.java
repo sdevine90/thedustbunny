@@ -8,12 +8,13 @@ import java.util.ArrayList;
  */
 public class DustBunny {
     String name;
-    private double clean;
+    private double dirty;
+
 
 
     public DustBunny(String name) {
         this.name = name;
-        this.clean = 100.0;
+        this.dirty = 100.0;
 
     }
 
@@ -21,9 +22,18 @@ public class DustBunny {
         return this.name;
     }
 
-    public double getClean(){
-        return this.clean;
+    public double getDirty(){
+        return this.dirty;
     }
+
+    public String setName(String name) {
+        return this.name = name;
+    }
+
+    public void setDirty(double dirty) {
+        this.dirty = dirty;
+    }
+
 
 //    on click method that when click clean it will add a method +10 etc... that will clean the dust bunny
 //    date and time that it arrived a parameter on the class write a function increase time wchi takes in an arugment of
