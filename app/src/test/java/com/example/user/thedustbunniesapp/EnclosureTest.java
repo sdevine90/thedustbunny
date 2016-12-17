@@ -14,7 +14,7 @@ public class EnclosureTest {
 
     @Before
     public void before(){
-        enclosure = new Enclosure("Closet");
+        enclosure = new Enclosure("Closet", EnclosureType.IN_THE_CLOSET);
         dustBunny = new DustBunny("Freddy");
     }
 
@@ -38,5 +38,15 @@ public class EnclosureTest {
     public void removeDustBunny(){
         enclosure.remove(dustBunny);
         assertEquals(0, enclosure.dustbunnyCount());
+    }
+
+    @Test
+    public void checkEnumName(){
+        assertEquals("under the couch", EnclosureType.UNDER_THE_COUCH.getName());
+        assertEquals("in the closet", EnclosureType.IN_THE_CLOSET.getName());
+        assertEquals("in the shed", EnclosureType.IN_THE_SHED.getName());
+        assertEquals("under the bed", EnclosureType.UNDER_THE_BED.getName());
+        assertEquals("in the shower", EnclosureType.IN_THE_SHOWER.getName());
+
     }
 }

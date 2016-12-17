@@ -8,29 +8,35 @@ import java.util.ArrayList;
  */
 public class Enclosure {
     private String name;
+    private EnclosureType enclosureType;
     private ArrayList<DustBunny> enclosure;
 
 
-    public Enclosure(String name){
+    public Enclosure(String name, EnclosureType enclosureType) {
         this.enclosure = new ArrayList<DustBunny>();
         this.name = name;
+        this.enclosureType = enclosureType;
 
     }
 
-    public String getName(){
+    public String getName() {
+
         return name;
     }
 
-    public int dustbunnyCount(){
+    public int dustbunnyCount() {
+
         return enclosure.size();
     }
 
-    public void add(DustBunny dustbunny){
+    public void add(DustBunny dustbunny) {
+
         enclosure.add(dustbunny);
     }
 
-    public void remove(DustBunny dustbunny){
+    public void remove(DustBunny dustbunny) {
         enclosure.remove(dustbunny);
     }
-}
 
+
+}
