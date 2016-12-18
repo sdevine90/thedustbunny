@@ -1,19 +1,73 @@
 package com.example.user.thedustbunniesapp;
 
 import org.junit.Before;
+import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by user on 16/12/2016.
  */
 
 public class HouseTest {
+    ArrayList<Enclosure> enclosures;
     Enclosure closet;
     Enclosure couch;
-    DustBunny dustBunny;
+    Enclosure shed;
+    Enclosure bed;
+    Enclosure shower;
+    DustBunny peaches;
+    DustBunny sunflower;
+    House house;
+
 
     @Before
     public void before() {
-        closet = new Enclosure("Closet", EnclosureType.IN_THE_CLOSET);
-        dustBunny = new DustBunny("Freddy");
+        couch = new Enclosure("under the couch", EnclosureType.UNDER_THE_COUCH);
+        closet = new Enclosure("in the closet", EnclosureType.IN_THE_CLOSET);
+        shed = new Enclosure("in the shed", EnclosureType.IN_THE_SHED);
+        bed = new Enclosure("under the Bed", EnclosureType.UNDER_THE_BED);
+        shower = new Enclosure("in the shower", EnclosureType.IN_THE_SHOWER);
+
+        peaches = new DustBunny("Peaches");
+        sunflower = new DustBunny("Sunflower");
+
+        enclosures = new ArrayList<>();
+        enclosures.add(couch);
+        enclosures.add(closet);
+        enclosures.add(shed);
+        enclosures.add(bed);
+        enclosures.add(shower);
+
+
+
+        house = new House(enclosures);
     }
+
+    @Test
+    public void testEnclosureCount(){
+        assertEquals(5, house.enclosureCount());
+    }
+
+    @Test
+    public void testsGetEnclosureList(){
+        assertEquals();
+    }
+
+
+    @Test
+    public void testAddDustBunny(){
+        house.addDustBunny(peaches, "under the couch");
+        assertEquals("under the couch", enclosures.get(0).getName());
+        assertEquals("Peaches", peaches.getName());
+    }
+
+//    @Test
+//    public void addDustBunny(){
+//        house.add(dustBunny);
+//        assertEquals(1, house.dustBunnyCount());
+//    }
+
 }
