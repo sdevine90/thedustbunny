@@ -9,11 +9,11 @@ import java.util.ArrayList;
 public class Enclosure {
     private String name;
     private EnclosureType enclosureType;
-    private ArrayList<DustBunny> enclosure;
+    private ArrayList<DustBunny> dustBunnies;
 
 
     public Enclosure(String name, EnclosureType enclosureType) {
-        this.enclosure = new ArrayList<DustBunny>();
+        this.dustBunnies = new ArrayList<DustBunny>();
         this.name = name;
         this.enclosureType = enclosureType;
 
@@ -26,16 +26,20 @@ public class Enclosure {
 
     public int dustbunnyCount() {
 
-        return enclosure.size();
+        return dustBunnies.size();
     }
 
     public void add(DustBunny dustbunny) {
 
-        enclosure.add(dustbunny);
+        dustBunnies.add(dustbunny);
     }
 
     public void remove(DustBunny dustbunny) {
-        enclosure.remove(dustbunny);
+        dustBunnies.remove(dustbunny);
+    }
+
+    public ArrayList<DustBunny> getDustBunnyList(){
+        return this.dustBunnies;
     }
 
 

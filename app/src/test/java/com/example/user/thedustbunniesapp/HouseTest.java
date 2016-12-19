@@ -51,12 +51,14 @@ public class HouseTest {
         assertEquals(5, house.enclosureCount());
     }
 
+
     @Test
     public void testsGetEnclosureList(){
-        assertEquals();
+        assertEquals(enclosures, house.getEnclosureList());
     }
 
 
+//gets the name of the dust bunny from within the enclosure
     @Test
     public void testAddDustBunny(){
         house.addDustBunny(peaches, "under the couch");
@@ -64,10 +66,12 @@ public class HouseTest {
         assertEquals("Peaches", peaches.getName());
     }
 
-//    @Test
-//    public void addDustBunny(){
-//        house.add(dustBunny);
-//        assertEquals(1, house.dustBunnyCount());
-//    }
+//    gets the name of the dust bunny and the enclosure it is in
+    @Test
+    public void findDustBunny(){
+        house.addDustBunny(sunflower, "under the couch");
+        String result = house.findDustBunnyByName("Sunflower");
+        assertEquals("Sunflower is under the couch", result);
+    }
 
 }
