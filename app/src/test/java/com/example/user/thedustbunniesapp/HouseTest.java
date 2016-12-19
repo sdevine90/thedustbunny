@@ -20,6 +20,7 @@ public class HouseTest {
     Enclosure shower;
     DustBunny peaches;
     DustBunny sunflower;
+    DustBunny stickyfingers;
     House house;
 
 
@@ -33,6 +34,7 @@ public class HouseTest {
 
         peaches = new DustBunny("Peaches");
         sunflower = new DustBunny("Sunflower");
+        stickyfingers = new DustBunny("Sticky Fingers");
 
         enclosures = new ArrayList<>();
         enclosures.add(couch);
