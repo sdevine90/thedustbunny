@@ -26,4 +26,8 @@ public class CurrentDate {
         // This gets current date
     }
 
+    
+//    if the user clicks the getClean button it holds the date of when it was clicked
+//    if hasnt been clicked in 5 days returns back to 100
+
 }

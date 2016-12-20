@@ -1,6 +1,10 @@
 package com.example.user.thedustbunniesapp;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.text.format.DateFormat;
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.Date;
@@ -53,8 +57,40 @@ public class DustBunny {
         return null;
     }
 
+//    if the user clicks the getClean button it holds the date of when it was clicked
+//    if hasnt been clicked in 5 days returns back to 100
 
 
+
+
+
+
+
+
+
+
+//    //pre-condition: variable "context" is already defined as the Context object in this scope
+//    String dateString = DateFormat.format("MM/dd/yyyy", new Date((new Date()).getTime())).toString();
+//    SharedPreferences sp = context.getSharedPreferences("<your-app-id>", Context.MODE_PRIVATE);
+//    SharedPreferences.Editor editor = sp.edit();
+//    editor.putString("<your-datetime-label>", dateString);
+//    editor.commit();
+//
+//    //pre-condition: variable "context" is already defined as the Context object in this scope
+//    SharedPreferences sp = context.getSharedPreferences("<your-app-id>", Context.MODE_PRIVATE);
+//    String savedDateTime = sp.getString("<your-datetime-label>", "");
+//    if (getClean.equals(savedDateTime)) {
+//        //no previous datetime was saved (allow button click)
+//        //(don't forget to persist datestring when button is clicked)
+//    } else {
+//        String dateStringNow = DateFormat.format("MM/dd/yyyy", new Date((new Date()).getTime())).toString();
+//        //compare savedDateTime with today's datetime (dateStringNow), and act accordingly
+//        if(savedDateTime.equals(dateStringNow){
+//            //same date; disable button
+//        } else {
+//            //different date; allow button click
+//        }
+//    }
 
 //    ^ above needs a method to save the date when the cleaning happened
 //
