@@ -1,9 +1,11 @@
 package com.example.user.thedustbunniesapp;
 
 
-import java.text.SimpleDateFormat;
-import java.text.DateFormat;
-import java.util.ArrayList;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.text.format.DateFormat;
+
 import java.util.Date;
 
 
@@ -25,9 +27,11 @@ public class CurrentDate {
         return this.date;
         // This gets current date
     }
-
-    
-//    if the user clicks the getClean button it holds the date of when it was clicked
-//    if hasnt been clicked in 5 days returns back to 100
-
 }
+
+//    Date is just a wrapper around a long milliseconds since 1970-01-01.
+//    So you have that already. Date.getTime() will return that, with millisecond precision.
+//    long timeMilli = date.getTime();
+//    System.out.println("Time in milliseconds using Date class: " + timeMilli);
+
+
