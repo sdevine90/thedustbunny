@@ -30,8 +30,12 @@ public class Enclosure {
     }
 
     public void add(DustBunny dustbunny) {
-
+        if (dustBunnies.size() <= 4 ){
+            return ;
+        }
+        else {
         dustBunnies.add(dustbunny);
+        }
     }
 
     public void remove(DustBunny dustbunny) {
@@ -41,7 +45,5 @@ public class Enclosure {
     public ArrayList<DustBunny> getDustBunnyList(){
         return this.dustBunnies;
     }
-
-    
 
 }
