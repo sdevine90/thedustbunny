@@ -29,14 +29,13 @@ public class Enclosure {
         return dustBunnies.size();
     }
 
+//    dust bunny enclosure maxes out at 4 if not maxed out can add
     public void add(DustBunny dustbunny) {
-        if (dustBunnies.size() <= 4 ){
-            return ;
-        }
-        else {
-        dustBunnies.add(dustbunny);
+        if (dustBunnies.size() < 4) {
+            dustBunnies.add(dustbunny);
         }
     }
+
 
     public void remove(DustBunny dustbunny) {
         dustBunnies.remove(dustbunny);

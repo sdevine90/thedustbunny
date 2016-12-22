@@ -30,8 +30,9 @@ public class House {
         }
     }
 
-//for every enclosure in the house I'm getting the list of all bunnies names then if the name is found in the list
-//    return the name of the bunny and the enclosure
+//for every enclosure in the house I'm getting the list of all bunnies names then if the name is
+// found in the list return the name of the bunny and the enclosure
+
     public String findDustBunnyByName(String dustBunnyName) {
         for (Enclosure enclosure : house) {
             for (DustBunny dustBunny : enclosure.getDustBunnyList()) {

@@ -35,6 +35,26 @@ public class EnclosureTest {
     }
 
     @Test
+    public void maxOutDustBunny(){
+        assertEquals(1, enclosure.dustbunnyCount());
+        DustBunny  dustBunny1 = new DustBunny("a");
+        DustBunny dustBunny2 = new DustBunny("v");
+
+        DustBunny dustBunny3 = new DustBunny("e");
+        DustBunny dustBunny4 = new DustBunny("g");
+        DustBunny dustBunny5 = new DustBunny("H");
+
+        enclosure.add(dustBunny1);
+        enclosure.add(dustBunny2);
+        assertEquals(3, enclosure.dustbunnyCount());
+        enclosure.add(dustBunny3);
+        enclosure.add(dustBunny4);
+        enclosure.add(dustBunny5);
+
+        assertEquals(4, enclosure.dustbunnyCount());
+    }
+
+    @Test
     public void removeDustBunny(){
         enclosure.remove(dustBunny);
         assertEquals(0, enclosure.dustbunnyCount());

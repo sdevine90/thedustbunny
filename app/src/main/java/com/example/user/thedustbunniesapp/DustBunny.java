@@ -72,6 +72,10 @@ public class DustBunny {
         return myFormat.format(date);
     }
 
+//    Use format() instead of parse(). The format() method is for
+//    formatting a Date object into a String. The parse() is to parse a String into a Date object.
+//
+
 //    public static Calendar checkDaysSince(Date date) {
 //        SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
 //        Calendar cal = Calendar.getInstance();
